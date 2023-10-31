@@ -90,7 +90,9 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+var allOptions = [specialCharacters, numericCharacters, lowerCasedCharacters, upperCasedCharacters];
 
+var randomElements = [];
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -101,6 +103,7 @@ function getRandom(arr) {
 function generatePassword() {
   var userChoice = prompt( "How many characters would you like in you Password?");
   
+  
   if (userChoice<=7 || userChoice>=129){
     
 alert ("you can't choose that number. Please choose between 8 to 128" );
@@ -109,11 +112,10 @@ var userChoice = prompt( "How many characters would you like in you Password?");
 
 }
 
-var userChoice=true;
+var userNumber = parseInt(userChoice);
 
 
-  
-}
+
 var option1 = confirm ("Click OK to confirm including special characters");
 
   var option2 = confirm ("Click OK to confirm including numeric characters");
@@ -126,8 +128,32 @@ var option1 = confirm ("Click OK to confirm including special characters");
 if(!option1&& !option2&& !option3&& !option4)
 {
   alert  ("you need to choose at least one"); 
+  
+  var option1 = confirm ("Click OK to confirm including special characters");
+
+  var option2 = confirm ("Click OK to confirm including numeric characters");
+
+  var option3 = confirm ("Click OK to confirm including lowercase characters");
+
+  var option4 = confirm ("Click OK to confirm including uppercase characters");
 
 
+}
+
+
+if (option1&&option2&&option3&&option4) {
+
+
+for (var i = 0;i < userNumber;i++){ 
+  var randomPassword = ( Math.floor(Math.random() * allOptions.length));
+
+  randomElements.push(allOptions[randomPassword]);
+  
+}
+ console.log (randomElements);
+
+}
+  
 
 }
   
