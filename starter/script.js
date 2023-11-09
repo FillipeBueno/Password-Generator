@@ -151,13 +151,24 @@ function generatePassword() {
 
       var password1 = randomElements.join(' ');
 
+}}
 
 
+ if (
+  
+    (option1) randomElements.push(specialCharacters);
+    (option2) randomElements.push(numericCharacters);
+    (option3) randomElements.push(lowerCasedCharacters);
+    (option4) randomElements.push(upperCasedCharacters);
+) {
+  for (var i = 0; i < userNumber; i++) {
+    var randomPassword = (Math.floor(Math.random() * allOptions.length));
+
+    randomElements.push(allOptions[randomPassword]);
+
+    var password1 = randomElements.join(' ');
 
 
-    }else{
-
-      
     }
 
     return password1;
