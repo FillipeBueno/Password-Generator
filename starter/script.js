@@ -90,9 +90,10 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-var allOptions = [specialCharacters, numericCharacters, lowerCasedCharacters, upperCasedCharacters];
+var allOptions = [...specialCharacters, ...numericCharacters, ...lowerCasedCharacters, ...upperCasedCharacters];
 
-var randomElements = [];
+
+var randomElements = [ ];
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -148,9 +149,20 @@ for (var i = 0;i < userNumber;i++){
   var randomPassword = ( Math.floor(Math.random() * allOptions.length));
 
   randomElements.push(allOptions[randomPassword]);
+
+  var password1 = randomElements.join(' ');
+
+  console.log (password1);
+
+  //var word = randomElements.toString();
+
+
+
+  //var password = randomElements;
   
 }
- console.log (randomElements);
+
+
 
 }
   
