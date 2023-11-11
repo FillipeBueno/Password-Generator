@@ -95,7 +95,6 @@ var allOptions = [...specialCharacters, ...numericCharacters, ...lowerCasedChara
 
 var randomElements = [];
 
-var newArray = '';
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -131,6 +130,7 @@ function generatePassword() {
   if (!option1 && !option2 && !option3 && !option4) {
     alert("you need to choose at least one");
 
+
     var option1 = confirm("Click OK to confirm including special characters");
 
     var option2 = confirm("Click OK to confirm including numeric characters");
@@ -142,43 +142,42 @@ function generatePassword() {
 
   }
 
- 
-
-
-//  if (option1 && option2 && option3 && option4) {
-//
-//
-//    for (var i = 0; i < userNumber; i++) {
-//      var randomPassword = (Math.floor(Math.random() * allOptions.length));
-//
-//      randomElements.push(allOptions[randomPassword]);
-//
-//      var password1 = randomElements.join(' ');
-//
-//}
-//}
-//
-//console.log (allOptions);
-//console.log(password1);
-//return password1;
 
 
 
-if(option1) randomElements.push(specialCharacters);
-if (option2) randomElements.push(numericCharacters);
-if (option3) randomElements.push(lowerCasedCharacters);
-if (option4) randomElements.push(upperCasedCharacters);
-  
-var newArray = newArray.concat(randomElements);
-  // for (var i = 0; i < userNumber; i++) {
-//   var randomPassword = (Math.floor(Math.random() * allOptions.length));
-//   randomElements.push(allOptions[randomPassword]);
-//   var password1 = randomElements.join(' ');
-//   }
+  //  if (option1 && option2 && option3 && option4) {
+  //
+  //
+  //for (var i = 0; i < userNumber; i++) {
+  //      var randomPassword = (Math.floor(Math.random() * allOptions.length));
+  //
+  //      randomElements.push(allOptions[randomPassword]);
+  //
+  //      var password1 = randomElements.join(' ');
+  //
+  //}
+  //}
+  //
+  //console.log (allOptions);
+  //console.log(password1);
+  //return password1;
 
-console.log (newArray);
- }
 
+
+  if (option1) randomElements = randomElements.concat(specialCharacters);
+  if (option2) randomElements = randomElements.concat(numericCharacters);
+  if (option3) randomElements = randomElements.concat(lowerCasedCharacters);
+  if (option4) randomElements = randomElements.concat(upperCasedCharacters);
+
+
+  for (var i = 0; i < userNumber; i++) {
+    var randomPassword = (Math.floor(Math.random() * randomElements.length));
+    //randomElements.push(randomElements[randomPassword]);
+    //var password1 = randomPassword.join(' ');
+  }
+  console.log(randomPassword);
+  //return password1;
+}
 
 
 
