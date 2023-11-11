@@ -95,6 +95,8 @@ var allOptions = [...specialCharacters, ...numericCharacters, ...lowerCasedChara
 
 var randomElements = [];
 
+var randomPassword = '';
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -171,12 +173,12 @@ function generatePassword() {
 
 
   for (var i = 0; i < userNumber; i++) {
-    var randomPassword = (Math.floor(Math.random() * randomElements.length));
+       randomPassword += randomElements[Math.floor(Math.random() * randomElements.length)];
     //randomElements.push(randomElements[randomPassword]);
     //var password1 = randomPassword.join(' ');
   }
   console.log(randomPassword);
-  //return password1;
+  return randomPassword;
 }
 
 
