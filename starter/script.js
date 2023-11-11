@@ -95,6 +95,8 @@ var allOptions = [...specialCharacters, ...numericCharacters, ...lowerCasedChara
 
 var randomElements = [];
 
+var newArray = '';
+
 // Function for getting a random element from an array
 function getRandom(arr) {
 
@@ -140,45 +142,47 @@ function generatePassword() {
 
   }
 
-
-  if (option1 && option2 && option3 && option4) {
-
-
-    for (var i = 0; i < userNumber; i++) {
-      var randomPassword = (Math.floor(Math.random() * allOptions.length));
-
-      randomElements.push(allOptions[randomPassword]);
-
-      var password1 = randomElements.join(' ');
-
-}}
+ 
 
 
- if (
+//  if (option1 && option2 && option3 && option4) {
+//
+//
+//    for (var i = 0; i < userNumber; i++) {
+//      var randomPassword = (Math.floor(Math.random() * allOptions.length));
+//
+//      randomElements.push(allOptions[randomPassword]);
+//
+//      var password1 = randomElements.join(' ');
+//
+//}
+//}
+//
+//console.log (allOptions);
+//console.log(password1);
+//return password1;
+
+
+
+if(option1) randomElements.push(specialCharacters);
+if (option2) randomElements.push(numericCharacters);
+if (option3) randomElements.push(lowerCasedCharacters);
+if (option4) randomElements.push(upperCasedCharacters);
   
-    (option1) randomElements.push(specialCharacters);
-    (option2) randomElements.push(numericCharacters);
-    (option3) randomElements.push(lowerCasedCharacters);
-    (option4) randomElements.push(upperCasedCharacters);
-) {
-  for (var i = 0; i < userNumber; i++) {
-    var randomPassword = (Math.floor(Math.random() * allOptions.length));
+var newArray = newArray.concat(randomElements);
+  // for (var i = 0; i < userNumber; i++) {
+//   var randomPassword = (Math.floor(Math.random() * allOptions.length));
+//   randomElements.push(allOptions[randomPassword]);
+//   var password1 = randomElements.join(' ');
+//   }
 
-    randomElements.push(allOptions[randomPassword]);
-
-    var password1 = randomElements.join(' ');
+console.log (newArray);
+ }
 
 
-    }
-
-    return password1;
-    console.log(password1);
 
 
-  }
 
-
-}
 
 
 
