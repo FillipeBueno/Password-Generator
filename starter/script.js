@@ -90,12 +90,6 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-var allOptions = [...specialCharacters, ...numericCharacters, ...lowerCasedCharacters, ...upperCasedCharacters];
-
-
-var randomElements = [];
-
-var randomPassword = '';
 
 
 // Function for getting a random element from an array
@@ -105,6 +99,11 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+
+  var randomElements = [];
+
+  var randomPassword = '';
+
   var userChoice = prompt("How many characters would you like in you Password?");
 
 
@@ -145,27 +144,6 @@ function generatePassword() {
   }
 
 
-
-
-  //  if (option1 && option2 && option3 && option4) {
-  //
-  //
-  //for (var i = 0; i < userNumber; i++) {
-  //      var randomPassword = (Math.floor(Math.random() * allOptions.length));
-  //
-  //      randomElements.push(allOptions[randomPassword]);
-  //
-  //      var password1 = randomElements.join(' ');
-  //
-  //}
-  //}
-  //
-  //console.log (allOptions);
-  //console.log(password1);
-  //return password1;
-
-
-
   if (option1) randomElements = randomElements.concat(specialCharacters);
   if (option2) randomElements = randomElements.concat(numericCharacters);
   if (option3) randomElements = randomElements.concat(lowerCasedCharacters);
@@ -173,20 +151,13 @@ function generatePassword() {
 
 
   for (var i = 0; i < userNumber; i++) {
-       randomPassword += randomElements[Math.floor(Math.random() * randomElements.length)];
-    //randomElements.push(randomElements[randomPassword]);
-    //var password1 = randomPassword.join(' ');
+    randomPassword += randomElements[Math.floor(Math.random() * randomElements.length)];
+
   }
-  console.log(randomPassword);
+
   return randomPassword;
+
 }
-
-
-
-
-
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
